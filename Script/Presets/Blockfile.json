@@ -1,0 +1,14 @@
+{
+	"presets": "none",
+	"font": "Arial",
+	"cardSize": "11pt",
+	"highlightColor": "Yellow",
+	"linkColor": "#0d62ff",
+	"linkCustom": "Underline",
+	"descriptionColor": "#000000",
+	"descriptionPosition": "After",
+	"tagColor": "Black",
+	"tagAlign": "Left",
+	"tagSize": "14pt",
+	"tagCustomization": "Bold"
+}

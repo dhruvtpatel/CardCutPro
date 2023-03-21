@@ -1,0 +1,236 @@
+#flexOptHTML
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: 45px;
+	margin-top:20px;
+	margin-right: 45px;
+	justify-content: center;
+
+
+}
+
+.flexCard
+{
+	width: 21%;
+	padding: 2%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: transparent solid;
+	cursor: pointer;
+		font-family: calibri, serif;
+
+}
+
+.flexCard:hover
+{
+	animation-name: cardHover;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+		font-family: calibri, serif;
+
+}
+
+.flexCard img
+{
+	width: 40%;
+	height: auto;
+		font-family: calibri, serif;
+}
+
+.flexDesc
+{
+	margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+		justify-content: center;
+
+}
+
+.flexVal
+{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#cardSlideHTML
+{
+	height: 50vh;
+	margin: 0 auto;
+	background-image: url(../Images/cardCutting1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#customHTML
+{
+	padding: 6px;
+	margin-left: 10%;
+	font: 50pt helvetica;
+	color: black
+	font-weight: bold;
+}
+
+#newText
+{
+	padding: 45px;
+	text-align: center;
+
+}
+
+
+#inputFormHTML
+{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*Justin imagine having to align input fields lmao*/
+#inputFormHTML label, #optDiv
+{
+	text-align: right;
+	width: 15%;
+	margin-right: 2%;
+	display: inline-block;
+	font: bold 12pt trebuchet ms;
+	color: black; /*#3d59a7;*/
+}
+
+.icon
+{
+	cursor: pointer;
+	font-size: 11pt;
+	color: blue;
+}
+
+#inputFormHTML input
+{
+	box-sizing: border-box;
+	width: 78%;
+	margin-bottom: 0.75em;
+	padding: 0.5em;
+	padding-left: 0.75em;
+	border: 1px #b3b3b3 solid;
+	border-radius: 6px;
+	outline: none;
+	font: 11pt trebuchet ms;
+}
+
+#inputFormHTML input:focus
+{
+	/*Not the smoothest thing but eh the animation would be 1 seconds anyways*/
+	border: 2px #010236 solid;
+}
+
+#inputFormHTML textarea
+{
+	overflow-y: auto;
+	resize: none;
+	outline: none;
+	width: 78%;
+	height: 30vh;
+	box-sizing: border-box;
+	font: 12pt trebuchet ms;
+	border-radius: 0.25em;
+	padding: 1%;
+}
+
+#optDiv img
+{
+	width: 45%;
+	padding-bottom: 0.7em;
+	height: auto;
+	cursor: pointer;
+}
+
+
+
+#optDiv img:hover
+{
+	width: 50%;
+}
+
+#cardHTML
+{
+	border: 1.5px outset black;
+	border-radius: 0.5em;
+	margin-left: 20%;
+	margin-right: 15%;
+	margin-top: 4%;
+	box-shadow: 0.5em 0.5em 0.5em grey;
+	height: auto;
+	padding: 1em;
+}
+
+#invisFormHTML
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 5;
+	visibility: hidden;
+}
+
+#invisFormHTML > div
+{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	height: auto;
+	width: 40%;
+	background-color: white;
+	border: 2px lightgray solid;
+	border-radius: 5%;
+	box-shadow: 8px 5px 10px;
+
+	/*Preparing for the css anim.*/
+	display: none;
+	opacity: 0;
+
+	font: 16pt trebuchet ms;
+}
+
+#invisFormHTML > div input
+{
+	width: 15%;
+}
+
+.modalTitleDiv, .modalSpan
+{
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+.modalSpan1
+{
+	margin-top: 2%;
+	margin-left: 10%;
+}
+
+.modalTitleDiv
+{
+	font: 24pt trebuchet ms;
+}
+
+.modalSelect, .addItem, .px
+{
+	font: 15pt trebuchet ms;
+}
+
+.leaveCSS
+{
+	width: 20%;
+	margin-bottom: 10%;
+	height: auto;
+	cursor: pointer;
+	
+	position: relative;
+	left: 70%; /*70 + 20 = 90*/
+}

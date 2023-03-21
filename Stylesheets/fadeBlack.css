@@ -1,0 +1,39 @@
+@keyframes fadeBlackIn
+{
+    from 
+    {
+        background-color: transparent;
+    }
+
+    to
+    {
+        background-color:  rgba(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes fadeBlackOut
+{
+    from 
+    {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    to
+    {
+        background-color: transparent;
+    }
+}
+
+.fadeBlackIn
+{
+    animation-name: fadeBlackIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.fadeBlackOut
+{
+    animation-name: fadeBlackOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}

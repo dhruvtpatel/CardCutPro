@@ -1,0 +1,26 @@
+@keyframes cardHover {
+	0% {
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	33% {
+		border-top-color: lightgrey;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	66% {
+		border-top-color: lightgrey;
+		border-right-color: lightgrey;
+		border-bottom-color: transparent;
+		border-left-color: lightgrey;
+	}
+	100% {
+		border-top-color: lightgrey;
+		border-right-color: lightgrey;
+		border-bottom-color: lightgrey;
+		border-left-color: lightgrey;
+	}
+}

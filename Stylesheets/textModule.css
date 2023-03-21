@@ -1,0 +1,28 @@
+#textDiv
+{
+    font: 14pt trebuchet ms;
+    color: black;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#textDiv a
+{
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 108, 180);
+    color: rgb(0, 108, 180);
+    cursor: pointer;
+}
+
+.descCSS
+{
+    font: 36pt trebuchet ms;
+    color: #00103b;
+
+    text-decoration: underline;
+    text-decoration-color: #00103b;
+
+    margin-left: 15%;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}

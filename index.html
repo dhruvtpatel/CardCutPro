@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <title>CardCut Pro</title>
+        <!-- creds to ComradeDiamond -->
+		<meta name="author" content="Dhruv Patel">
+		<meta charset="UTF-8">
+		<meta name="description" content="An automated card cutter for any style of debate!">
+
+        <link rel="stylesheet" href="Stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" href="Stylesheets/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="Stylesheets/fontAwesome.css">
+        <link rel="stylesheet" href="Stylesheets/light-box.css">
+        <link rel="stylesheet" href="Stylesheets/templatemo-style.css">
+		<link rel="stylesheet" href="Stylesheets/hFt.css" />
+		<link rel="stylesheet" href="Stylesheets/index.css" />
+		<link rel="stylesheet" href="Stylesheets/cardHover.css" />
+		<link rel="stylesheet" href="Stylesheets/zoomIn.css" />
+		<link rel="stylesheet" href="Stylesheets/fadeBlack.css" />
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="Script/index.js"></script>
+		<script src="Script/navControl.js"></script>
+    </head>
+    	<section></section>
+
+<body 
+		onload="initialize(document);" 
+		onscroll="editNav(window.scrollY, document.getElementById('topNavHTML'))();"
+	>
+	
+    <nav>
+   
+        <div class="logo">
+            <a href="index.html">CardCut<em>Pro</em></a>
+        </div>
+      <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav>
+
+    <div id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <div class="inner">
+              <h1><em>Welcome to </em>CardCut Pro</h1>
+             
+                <div class="scroll-icon">
+                    <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="Images/scroll-icon.png" alt=""></a>
+                </div>    
+            </div>
+        </div>
+        <video autoplay="" loop="" muted>
+        	<source src="Images/video.mp4" type="video/mp4" />
+        </video>
+    </div>
+    </nav>
+	
+		<h1 id="newText">
+		Welcome to CardCut Pro, your one-stop solution to easen the process of citing and cutting cards for all forms of debate. Under, you'll find several options to customize your cutting process, including changing the font and adding special presets.
+		</h1>
+
+		<!-- Use Hori & Vertical Flexbox model here I think -->
+		<div id="flexOptHTML">
+			<div class="flexCard">
+				<img src="Images/cog.png" /> 
+				<div class="flexDesc">Presets</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/font.png" />
+				<div class="flexDesc">Font</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/sizeBlk.png" />
+				<div class="flexDesc">Card Size</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/marker.png" />
+				<div class="flexDesc">Highlight Color</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/userColor.png" />
+				<div class="flexDesc">Author/Link Color</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/userCustomization.png" />
+				<div class="flexDesc">Author/Link Customization</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/descriptionColor.png" />
+				<div class="flexDesc">Description Color</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/descriptionPosition.png" />
+				<div class="flexDesc">Description Position</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/tagColor.png" />
+				<div class="flexDesc">Tag Color</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/tagPosition.png" />
+				<div class="flexDesc">Tag Align</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/tagSize.png" />
+				<div class="flexDesc">Tag Size</div>
+				<div class="flexVal"></div>
+			</div>
+			<div class="flexCard">
+				<img src="Images/tagCustomization.png" />
+				<div class="flexDesc">Tag Customizations</div>
+				<div class="flexVal"></div>
+			</div>
+		</div>
+
+		<h1 id="newText">
+			<br /> Now that you've formatted your card, here it is!
+		</h1>
+		<br />
+
+		<form id="inputFormHTML">
+			<label>Card Tag <span class="icon" 
+				title="This is your description of the card">&#9432;</span> </label> <input name="tag" 
+				placeholder="DA, Turn, AT, Arg"/> <br />
+			<label>Author <span class="icon" 
+				title="Author's last name and last two digits of the year">&#9432;</span> </label> <input name="author" 
+				placeholder="Brummet 20'"/> <br />
+			<label>Link <span class="icon" 
+				title="Link to the card. Fair enough.">&#9432;</span class="icon"> </label> <input name="link" 
+				placeholder="https://"/> <br />
+			<label>Description <span class="icon" 
+				title="An optional description so you can explain the card more">&#9432;</span> </label> <input name="desc" 
+				placeholder="Insert Description"/> <br /> 
+			
+			<div id="optDiv">
+				<img 
+					src="Images/scissors.png"
+					title="Generate Cut Card"
+					onclick="displayCard(document.getElementById('inputFormHTML'), document.getElementById('cardHTML'), customizations);"
+				/> <br />
+				<img 
+					src="Images/paste.png"
+					title="Paste Card"
+					onclick="pasteCard(navigator.clipboard, document.getElementById('inputFormHTML').content);"
+				/> <br />
+				
+				<img 
+					src="Images/delete.png"
+					title="Delete Inputs"
+					onclick="deleteInput(document.getElementById('inputFormHTML'));"
+				/> <br />
+			</div>
+
+			<textarea 
+				name="content" 
+				placeholder="Insert your card! Sandwich anything that needs to highlighted in \"
+			></textarea>
+		</form>
+
+		<div id="cardHTML">
+			Your card goes here
+		</div> 
+		
+		<br />
+
+		<!--Invisible MDC Input Display divs-->
+		<form id="invisFormHTML">
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Preset</b></div>
+
+				<span class="modalSpan">Presets: </span>
+				<select class="modalSelect">
+					<option value="None">None</option>
+					<option value="Justin">Justin</option>
+					<option value="Blockfile">Le Holy Blockfile</option>
+				</select> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Font</b></div>
+
+				<span class="modalSpan">Fonts: </span>
+				<select class="modalSelect">
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Arial">Arial</option>
+					<option value="Calibri">Calibri (Body)</option>
+					<option value="Garamond">Garamond</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Comic Sans ms">Comic Sans</option>
+					<option value="Trebuchet ms">Trebuchet ms</option>
+				</select> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false" class="fontNum">
+				<div class="modalTitleDiv"><b>Select a Font Size</b></div>
+
+				<span class="modalSpan">Size: </span>
+				<input class="modalSelect" type="number" min="0" value="12"/>
+				<span class="px"> pt</span> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Highlight Color</b></div>
+
+				<span class="modalSpan">Colors: </span>
+				<select class="modalSelect">
+					<option value="None">None</option>
+					<option value="Yellow">Yellow</option>
+					<option value="#03fc39">Lime</option>
+					<option value="#00fbff">Light Blue</option>
+					<option value="#ff9cf5">Pink</option>
+					<option value="#db9cff">Light Purple</option>
+					<option value="#ffde66">Light Orange</option>
+					<option value="#dbdbdb">50 Shades of Gray</option>
+				</select> <br />
+
+				<div class="modalSpan1">Custom Hex Color: </div>
+				<span class="modalSpan1">#</span><input class="addItem" maxlength="6" />
+				<br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Link Color</b></div>
+
+				<span class="modalSpan">Color: </span>
+				<select class="modalSelect">
+					<option value="Black">Black</option>
+					<option value="#2ea8ff">Blue</option>
+					<option value="#40fc1e">Green</option>
+					<option value="#ffc400">Orange</option>
+				</select> <br />
+
+				<div class="modalSpan1">Custom hex color: </div>
+				<span class="modalSpan1">#</span><input class="addItem" maxlength="6" />
+				<br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select Link Customizations: </b></div>
+
+				<span class="modalSpan">Customizations: </span>
+				<select class="modalSelect">
+					<option value="None">None</option>
+					<option value="Bold">Bold</option>
+					<option value="Italics">Italics</option>
+					<option value="Underline">Underline</option>
+					<option value="Bold Italics">Bold + Italics</option>
+					<option value="Bold Underline">Bold + Underline</option>
+					<option value="Bold Italics Underline">Screw it, all 3</option>
+				</select> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Description Color</b></div>
+
+				<span class="modalSpan">Color: </span>
+				<select class="modalSelect">
+					<option value="Black">Black</option>
+					<option value="#2ea8ff">Blue</option>
+					<option value="#40fc1e">Green</option>
+					<option value="#ffc400">Orange</option>
+				</select> <br />
+
+				<div class="modalSpan1">Custom hex color: </div>
+				<span class="modalSpan1">#</span><input class="addItem" maxlength="6" />
+				<br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select Description Position: </b></div>
+
+				<span class="modalSpan">Position: </span>
+				<select class="modalSelect">
+					<option value="Before">Before</option>
+					<option value="After">After</option>
+				</select> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select a Tag Color</b></div>
+
+				<span class="modalSpan">Color: </span>
+				<select class="modalSelect">
+					<option value="Black">Black</option>
+					<option value="#2ea8ff">Blue</option>
+					<option value="#40fc1e">Green</option>
+					<option value="#ffc400">Orange</option>
+				</select> <br />
+
+				<div class="modalSpan1">Custom Hex Color: </div>
+				<span class="modalSpan1">#</span><input class="addItem" maxlength="6" />
+				<br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select Tag Alignment: </b></div>
+
+				<span class="modalSpan">Align: </span>
+				<select class="modalSelect">
+					<option value="Left">Left</option>
+					<option value="Right">Right</option>
+					<option value="Center">Center</option>
+					<option value="Justify">Justify</option>
+				</select> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false" class="fontNum">
+				<div class="modalTitleDiv"><b>Select Tag Size: </b></div>
+
+				<span class="modalSpan">Size: </span>
+				<input type="number" class="modalSelect" min="0" value="12"/> 
+				<span class="px"> pt</span> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+			<div eAdded="false">
+				<div class="modalTitleDiv"><b>Select Tag Customizations: </b></div>
+
+				<span class="modalSpan">Customizations: </span>
+				<select class="modalSelect">
+					<option value="None">None</option>
+					<option value="Bold">Bold</option>
+					<option value="Italics">Italics</option>
+					<option value="Underline">Underline</option>
+					<option value="Bold Italics">Bold + Italics</option>
+					<option value="Bold Underline">Bold + Underline</option>
+					<option value="Bold Italics Underline">Screw it, all 3</option>
+				</select> <br />
+
+				<image 
+					src="Images/exit.png" 
+					class="leaveCSS" 
+				/>
+			</div>
+		</form>
+
+		<div id="tempWrapHTML">
+			<footer id="credits">
+				CardCutPro <br />
+			</footer>
+		</div>
+	</body>
+</html>

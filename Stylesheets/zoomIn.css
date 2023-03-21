@@ -1,0 +1,47 @@
+/*When we remove one keyframe animation via the class, 
+we immediately restore it to where we left off with other keyframe*/
+@keyframes zoomIn
+{
+    from 
+    {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    to
+    {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+@keyframes zoomOut
+{
+    from 
+    {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    
+    to
+    {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.zoomIn
+{
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+.zoomOut
+{
+    animation-name: zoomOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
