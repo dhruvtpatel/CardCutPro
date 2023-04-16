@@ -18,10 +18,10 @@ To use CardCutPro, simply create an account and start adding cards. You can inpu
 <img width="2240" alt="Screenshot 2023-03-27 at 2 30 30 PM" src="https://user-images.githubusercontent.com/81060486/228046835-940a1e47-c672-42b3-8f69-33600686de2a.png">
 
 ## Todo
-Allow users to share cards with other users
-Add a search function to quickly find specific cards
-Improve UI for better user experience
-Add more customization options
+- Allow users to share cards with other users
+- Add a search function to quickly find specific cards
+- Improve UI for better user experience
+- Add more customization options
 
 #### License
 CardCutPro is licensed under the MIT License. See LICENSE.md for more information.
